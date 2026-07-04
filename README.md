@@ -1,6 +1,6 @@
 # Chzzk Peek
 
-CHZZK 방송 상태를 바탕화면에서 확인하는 Rainmeter 스킨입니다.
+치지직 스트리머의 방송 상태를 바탕화면에서 확인하는 Rainmeter 스킨입니다.
 
 스트리머의 방송 상태, 방송 제목, 시청자 수, 카테고리, 업타임을 작게 표시합니다. CHZZK API를 Rainmeter의 WebParser로 직접 읽지 않고 PowerShell 캐시 스크립트로 가져와서, 타임아웃이나 한글 인코딩 문제를 줄이는 방식으로 동작합니다.
 
