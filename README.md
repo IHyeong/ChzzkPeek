@@ -37,15 +37,21 @@ Rainmeter가 설치되어 있지 않다면 공식 사이트에서 먼저 설치�
 
 ## Installation
 
-1. 이 저장소를 다운로드합니다.
-2. 폴더를 Rainmeter 스킨 폴더 아래에 넣습니다.
+1. GitHub 저장소의 **Releases** 페이지로 이동합니다.
+2. 최신 릴리스에서 `.rmskin` 파일을 다운로드합니다.
+3. 다운로드한 `.rmskin` 파일을 더블클릭합니다.
+4. Rainmeter Skin Installer가 열리면 **Install**을 누릅니다.
+5. Rainmeter에서 `ChzzkPeek > ChzzkPeek.ini` 스킨을 불러옵니다.
+
+## Manual Installation
+
+소스 파일로 직접 설치하려면 이 저장소를 다운로드한 뒤, 폴더를 Rainmeter 스킨 폴더 아래에 넣습니다.
 
 ```txt
-Documents\Rainmeter\Skins\ChzzkLivePersonal
+Documents\Rainmeter\Skins\ChzzkPeek
 ```
 
-3. Rainmeter를 열고 **Refresh all**을 실행합니다.
-4. `ChzzkLivePersonal > ChzzkPeek.ini` 스킨을 불러옵니다.
+그 다음 Rainmeter에서 **Refresh all**을 실행하고 `ChzzkPeek > ChzzkPeek.ini` 스킨을 불러옵니다.
 
 ## Settings
 
@@ -64,7 +70,7 @@ CheckSeconds=60
 BackgroundAlpha=150
 MainColor=245,245,245,255
 SubColor=185,185,185,255
-LiveText=방송 중
+LiveText=뱅온
 OfflineText=오프라인
 CheckingText=확인 중
 ```
