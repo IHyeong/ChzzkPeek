@@ -70,7 +70,7 @@ CheckSeconds=60
 BackgroundAlpha=150
 MainColor=245,245,245,255
 SubColor=185,185,185,255
-LiveText=뱅온
+LiveText=방송 중
 OfflineText=오프라인
 CheckingText=확인 중
 ```
