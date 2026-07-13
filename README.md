@@ -8,7 +8,7 @@ CHZZK 방송 상태를 바탕화면에서 확인하는 Rainmeter 스킨입니다
 
 1. [Rainmeter](https://www.rainmeter.net/)를 설치한 뒤, Releases에서 `.rmskin` [파일을 받아](https://github.com/IHyeong/ChzzkPeek/releases/download/v1.0.0/ChzzkPeek_1.0.0.rmskin) 실행
 2. 설치 후 Rainmeter에서 `ChzzkPeek > ChzzkPeek.ini` 스킨을 불러오기
-3. 스트리머 아이디, 새로고침 주기, 색상은 `@Resources\settings.inc` 파일에서 수정
+3. 스트리머 아이디, 새로고침 주기, 색상은 `@Resources\settings.inc` 파일에서 수정<br>
 스트리머 아이디는 https://chzzk.naver.com/abcdef123456에서 'abcdef123456'
 ## 미리보기
 
