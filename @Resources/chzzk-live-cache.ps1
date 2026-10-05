@@ -3,13 +3,13 @@
     [string]$OutputPath = "$PSScriptRoot\chzzk-live-cache.json",
     [switch]$Loop,
     [int]$IntervalSec = 30,
-    [string]$SkinName = "ChzzkPeek"
+    [string]$SkinName = "ChzzkLivePersonal"
 )
 
 $ErrorActionPreference = "Stop"
 
 if ([string]::IsNullOrWhiteSpace($ChannelId)) {
-    throw "ChannelId is required. Set ChannelId in settings.inc."
+    throw "ChannelId is required. Set ChannelId in ChzzkLivePersonal.ini."
 }
 
 function U([int[]]$Codes) {
@@ -225,7 +225,7 @@ function Update-ChzzkCache {
 }
 
 if ($Loop) {
-    $mutexName = "Global\ChzzkPeekUpdater-$ChannelId"
+    $mutexName = "Global\ChzzkLivePersonalUpdater-$ChannelId"
     $createdNew = $false
     $mutex = New-Object System.Threading.Mutex($true, $mutexName, [ref]$createdNew)
 
@@ -236,27 +236,10 @@ if ($Loop) {
     try {
         $rainmeterExe = Find-RainmeterExe
 
-        $settingsPath = Join-Path $PSScriptRoot "settings.inc"
-
         while ($true) {
-            $settings = Read-SkinSettings -Path $settingsPath
-
-            $currentChannelId = $ChannelId
-            if ($settings.ContainsKey("ChannelId") -and -not [string]::IsNullOrWhiteSpace($settings["ChannelId"])) {
-                $currentChannelId = [string]$settings["ChannelId"]
-            }
-
-            $currentIntervalSec = $IntervalSec
-            if ($settings.ContainsKey("CheckSeconds")) {
-                $parsedInterval = 0
-                if ([int]::TryParse([string]$settings["CheckSeconds"], [ref]$parsedInterval) -and $parsedInterval -gt 0) {
-                    $currentIntervalSec = $parsedInterval
-                }
-            }
-
-            $variables = Update-ChzzkCache -ChannelId $currentChannelId -OutputPath $OutputPath
+            $variables = Update-ChzzkCache -ChannelId $ChannelId -OutputPath $OutputPath
             Set-RainmeterVariables -RainmeterExe $rainmeterExe -SkinName $SkinName -Variables $variables
-            Start-Sleep -Seconds ([Math]::Max(10, $currentIntervalSec))
+            Start-Sleep -Seconds ([Math]::Max(10, $IntervalSec))
         }
     }
     finally {
@@ -267,5 +250,4 @@ if ($Loop) {
 else {
     Update-ChzzkCache -ChannelId $ChannelId -OutputPath $OutputPath | Out-Null
 }
-
 
