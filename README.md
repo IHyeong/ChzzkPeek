@@ -41,7 +41,7 @@ Rainmeter가 설치되어 있지 않다면 공식 사이트에서 먼저 설치�
 
 ## 설치 방법
 
-1. [파일 다운 받기](https://github.com/IHyeong/ChzzkPeek/releases/download/v1.0.0/ChzzkPeek_1.0.1.rmskin)
+1. [파일 다운 받기](https://github.com/IHyeong/ChzzkPeek/releases/download/v1.0.1/ChzzkPeek_1.0.1.rmskin)
 2. 다운로드한 `.rmskin` 파일을 더블클릭합니다.
 3. Rainmeter Skin Installer가 열리면 **Install**을 누릅니다.
 
